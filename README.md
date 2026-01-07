@@ -15,7 +15,7 @@ Este es un proyecto profesional desarrollado con **FastAPI** y **Llama 3.3 (IA)*
 ## 🛠️ Tecnologías
 - **Backend:** Python, FastAPI, Groq Cloud API, HTTPX.
 - **Frontend:** HTML, CSS, JavaScript.
-- **Despliegue:** Render (Web Service).
+- **Despliegue:** Hugging Face (Docker).
 
 ## 📸 Capturas
 ![Inicio](Inicio.PNG)
