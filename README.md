@@ -18,5 +18,5 @@ Este es un proyecto profesional desarrollado con **FastAPI** y **Llama 3.3 (IA)*
 - **Despliegue:** Render (Web Service).
 
 ## 📸 Capturas
-![Inicio](inicio.PNG)
-![Resultado](resultado.PNG)
+![Inicio](Inicio.PNG)
+![Resultado](Resultado.PNG)
