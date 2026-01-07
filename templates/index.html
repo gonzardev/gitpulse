@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitPulse: Developer Insights</title>
+    <link rel="stylesheet" href="/static/styles.css?v=1">
+</head>
+<body>
+    <div class="container">
+        <h1>GitPulse</h1>
+        <input type="text" id="username" placeholder="Usuario de GitHub">
+        <button onclick="buscarUsuario()">Analizar Perfil</button>
+
+        <div id="resultado" class="card" style="display: none;">
+        <h2 id="res-usuario"></h2>
+        <p id="etiqueta-nivel">Nivel: <strong id="res-nivel"></strong></p>
+        <p id="etiqueta-repos">Repositorios: <span id="res-repos"></span></p>
+        <p id="etiqueta-estrellas">Estrellas Totales: <span id="res-estrellas"></span></p>
+        
+
+    <div id="ia-card" class="ia-card">
+        <div class="ia-card-header">
+            <span class="ia-icon">⚡</span>
+            <span class="ia-title">CONSEJO DE LA IA</span>
+        </div>
+        <div class="ia-card-body">
+            <p id="res-ia"></p>
+        </div>
+        <div class="ia-card-footer">
+            <small>Insights by Llama 3.3</small>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+
+        async function buscarUsuario() {
+            const user = document.getElementById('username').value;
+            const divResultado = document.getElementById('resultado');
+
+            const response = await fetch(`/analizar/${user}`)
+            const data = await response.json()
+
+            if (response.status === 200) {
+                divResultado.style.display = 'block';
+                document.getElementById('res-usuario').innerText = data.usuario;
+                document.getElementById('res-nivel').innerText = data.nivel_desarrollador;
+                document.getElementById('res-repos').innerText = data.repositorios_publicos;
+                document.getElementById('res-estrellas').innerText = data.estrellas_totales;
+                document.getElementById('res-ia').innerText = data.consejo;
+            } else {
+                alert("Usuario no encontrado")
+            }   
+        }
+
+    </script>
+
+
+</body>
+</html>

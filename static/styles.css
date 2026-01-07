@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #161b22;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #238636;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #2ea043;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    background-color: #0d1117;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #58a6ff;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.card {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #30363d;
+    text-align: left;
+    animation: fadeIn 0.5s ease;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #58a6ff;
+}
+
+h2 {
+    color: #58a6ff;
+    margin-bottom: 1rem;
+}
+
+strong {
+    color: #f0883e;
+}
+
+.ia-card {
+    background: #161b22; /* Fondo oscuro tipo GitHub */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 25px;
+    border: 1px solid #30363d;
+    border-left: 5px solid #7aa2f7; /* El toque azul */
+    text-align: left; /* Para que el consejo se lea mejor */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.ia-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.ia-icon { font-size: 1.1rem; }
+
+.ia-title {
+    color: #7aa2f7;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+#res-ia {
+    color: #c9d1d9;
+    font-size: 25px;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0;
+}
+
+.ia-card-footer {
+    margin-top: 12px;
+    border-top: 1px solid #30363d;
+    padding-top: 8px;
+}
+
+.ia-card-footer small {
+    color: #8b949e;
+    font-size: 1rem;
+}
+
+#res-usuario {
+    font-size: 35px;
+}
+
+
+#etiqueta-nivel {
+    font-size: 26px;
+}
+
+#etiqueta-repos {
+    font-size: 26px;
+}
+
+#etiqueta-estrellas {
+    font-size: 26px;
+}
